@@ -283,7 +283,7 @@
 	perst-gpio = <&tlmm 58 GPIO_ACTIVE_LOW>;
 
 	bridge@0,0 {
-		reg = <0x00020000 0 0 0 0>;
+		reg = <0x00000000 0 0 0 0>;
 		#address-cells = <3>;
 		#size-cells = <2>;
 		ranges;
@@ -299,18 +299,18 @@
 
 	perst-gpio = <&tlmm 61 GPIO_ACTIVE_LOW>;
 
-	bridge@1,0 {
-		reg = <0x00010000 0 0 0 0>;
+	bridge@0,0 {
+		reg = <0x00000000 0 0 0 0>;
 		#address-cells = <3>;
 		#size-cells = <2>;
 		ranges;
 
-		wifi@1,0 {
+		wifi@0,0 {
 			status = "okay";
 
 			/* ath11k has no DT compatible for PCI cards */
 			compatible = "pci17cb,1104";
-			reg = <0x00010000 0 0 0 0>;
+			reg = <0x00000000 0 0 0 0>;
 
 			qcom,ath11k-calibration-variant = "prpl-Haze";
 		};
